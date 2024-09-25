@@ -12,36 +12,6 @@
 
 #include "get_next_line.h"
 
-// int	main(void)
-// {
-// 	int		fd;
-// 	char	*r_line;
-
-// 	fd = open("test2.txt", O_RDONLY);
-// 	if (fd < 0)
-// 	{
-// 		write(1, "ERROR\n", 6);
-// 		return (0);
-// 	}
-// 	r_line = get_next_line(fd);
-// 	printf("%s", r_line);
-// 	if (r_line != NULL)
-// 		free(r_line);
-// 	r_line = get_next_line(fd);
-// 	printf("%s", r_line);
-// 	if (r_line != NULL)
-// 		free(r_line);
-// 	r_line = get_next_line(fd);
-// 	printf("%s", r_line);
-// 	if (r_line != NULL)
-// 		free(r_line);
-// 	r_line = get_next_line(fd);
-// 	printf("%s", r_line);
-// 	if (r_line != NULL)
-// 		free(r_line);
-// 	return (0);
-// }
-
 // Last fix was "calloc" for r. 
 char	*get_next_line(int fd)
 {
@@ -71,7 +41,7 @@ char	*get_next_line(int fd)
 	return (r_line);
 }
 
-// I sent static here and put everything that is read 
+// I send static here and put everything that is read 
 // until first newline here and return.
 char	*read_content(int fd, char *r)
 {
